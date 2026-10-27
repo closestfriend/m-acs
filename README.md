@@ -1,20 +1,24 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# m-acs
 
-# Run and deploy your AI Studio app
+Interactive multi-agent access-control and runtime guardrail simulator built with React 19, ReactFlow, and the Gemini API.
 
-This contains everything you need to run your app locally.
+Models four adversarial failure classes across a multi-agent topology:
+1. **Indirect Prompt Injection**: Untrusted external payloads hijacking downstream tool calls.
+2. **Untrusted-to-Action (U2A) Escalation**: Low-privilege context triggering high-privilege state mutations.
+3. **Confused Deputy**: Delegate agents tricked into exercising authority on behalf of an unauthorized caller.
+4. **Secret Exfiltration**: Sensitive store values leaking across agent message boundaries.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1ONsvJ-3_vkdEQc5JH1rpYcjt-DS7rK3s
+## Quickstart
 
-## Run Locally
+```bash
+npm install
+# Create .env.local with GEMINI_API_KEY=your_key
+npm run dev
+```
 
-**Prerequisites:**  Node.js
+## Structure
 
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+- `components/NetworkGraph.tsx`: ReactFlow topology of active agents, trust zones, and message edges.
+- `components/SimulationDashboard.tsx`: Scenario runner and runtime policy toggle controls.
+- `components/DataStore.tsx` & `LogPanel.tsx`: Live audit log of blocked vs. permitted access attempts.
+- `services/geminiService.ts`: Agent turn execution and guardrail evaluation calls.

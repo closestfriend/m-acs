@@ -28,3 +28,11 @@ dist-ssr
 
 # AI Studio export snapshot (duplicate of the source)
 multi-agent-access-control-simulation.zip
+CLAUDE.md
+AGENTS.md
+.claude/
+.env
+.env.local
+dist/
+node_modules/
+*.zip
