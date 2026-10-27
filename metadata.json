@@ -1,5 +1,6 @@
 {
-  "name": "Multi-Agent Access Control Simulation",
-  "description": "A web application to simulate and visualize access control failures and successes in a multi-agent communication system, demonstrating the risks of unrestricted data access versus role-based access control (RBAC).",
-  "requestFramePermissions": []
+  "name": "AI Agent Security Simulation",
+  "description": "An interactive multi-agent visualizer and runtime guardrail simulator demonstrating defenses against Indirect Prompt Injection, Untrusted-to-Action (U2A) escalation, Confused Deputy attacks, and Secret Exfiltration as defined in the JED Agent Security Benchmark.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
 }
